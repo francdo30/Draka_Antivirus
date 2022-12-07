@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BC00BC7-873B-40CA-88AB-BF29C0964C22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Draka_Antivirus</RootNamespace>
+    <AssemblyName>Draka_Antivirus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Draka_Antivirus.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoClosingMessageBox">
+      <HintPath>E:\autre\Draka_Antivirus\packages\AutoClosingMessageBox.1.0.0.2\lib\net40\AutoClosingMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvTextFieldParser, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CsvTextFieldParser.1.2.2\lib\netstandard2.0\CsvTextFieldParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapplo.Windows.Common">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Dapplo.Windows.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DocuSign.eSign">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\DocuSign.eSign.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms">
+      <HintPath>E:\autre\Draka_Antivirus\packages\Guna.Charts.WinForms.1.0.2\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>E:\autre\Draka_Antivirus\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.UIAutomationClient">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Interop.UIAutomationClient.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph.Core">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Common">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Rebex.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.FileSystem">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\Rebex.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.116.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.1.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Abstractions">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.1.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WinHttpHandler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.WinHttpHandler.4.0.0\lib\net46\System.Net.Http.WinHttpHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.1.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.6.0.5\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriverManager">
+      <HintPath>..\..\UrlCurrent\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\WebDriverManager.dll</HintPath>
+    </Reference>
+    <Reference Include="WinFormAnimation">
+      <HintPath>..\Users\Francky le boss\Desktop\Draka_Antivirus\bin\Debug\net6.0-windows\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.1.2.1.6229\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.1.2.1.6229\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="XFormsProvider, Version=0.1.7.26981, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.XamlProvider.0.1.7\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\XFormsProvider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Database.cs" />
+    <Compile Include="Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_Principales\ChromePassReader.cs" />
+    <Compile Include="Pages_Principales\ControleNav.cs" />
+    <Compile Include="Pages_Principales\CredentialModel.cs" />
+    <Compile Include="Pages_Principales\FFDecryptor.cs" />
+    <Compile Include="Pages_Principales\FFinder.cs" />
+    <Compile Include="Pages_Principales\FirefoxPassReader.cs" />
+    <Compile Include="Pages_Principales\GCDecryptor.cs" />
+    <Compile Include="Pages_Principales\InfoSystem.cs" />
+    <Compile Include="Pages_Principales\IPassReader.cs" />
+    <Compile Include="Pages_Principales\Ojectionnalwebsite.cs" />
+    <Compile Include="Pages_Principales\ParentalControl.cs" />
+    <Compile Include="Pages_Principales\Scancp.cs" />
+    <Compile Include="Pages_Principales\ScanP.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserScan.Designer.cs">
+      <DependentUpon>UserScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserScanComplete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserScanComplete.Designer.cs">
+      <DependentUpon>UserScanComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserScanPerso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserScanPerso.Designer.cs">
+      <DependentUpon>UserScanPerso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AllProgram.Designer.cs">
+      <DependentUpon>AllProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Antivirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Antivirus.Designer.cs">
+      <DependentUpon>Antivirus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BankCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\BankCards.Designer.cs">
+      <DependentUpon>BankCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ControlParental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ControlParental.Designer.cs">
+      <DependentUpon>ControlParental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Disk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Disk.Designer.cs">
+      <DependentUpon>Disk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EventLogAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EventLogAlert.Designer.cs">
+      <DependentUpon>EventLogAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Firewall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Firewall.Designer.cs">
+      <DependentUpon>Firewall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FrequentlyCrashingPrograms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\FrequentlyCrashingPrograms.Designer.cs">
+      <DependentUpon>FrequentlyCrashingPrograms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Historics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Historics.Designer.cs">
+      <DependentUpon>Historics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InfosSysteme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\InfosSysteme.Designer.cs">
+      <DependentUpon>InfosSysteme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Maintenance.Designer.cs">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Memoire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Memoire.Designer.cs">
+      <DependentUpon>Memoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ObjectionableWebsites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ObjectionableWebsites.Designer.cs">
+      <DependentUpon>ObjectionableWebsites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Parametres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Parametres.Designer.cs">
+      <DependentUpon>Parametres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PassWord.Designer.cs">
+      <DependentUpon>PassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Performance.Designer.cs">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Quarantaine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Quarantaine.Designer.cs">
+      <DependentUpon>Quarantaine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Recycle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Recycle.Designer.cs">
+      <DependentUpon>Recycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reseau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Reseau.Designer.cs">
+      <DependentUpon>Reseau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RestorePoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\RestorePoints.Designer.cs">
+      <DependentUpon>RestorePoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Scan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Scan.Designer.cs">
+      <DependentUpon>Scan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ScanComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ScanComplete.Designer.cs">
+      <DependentUpon>ScanComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ScanPersonnalise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ScanPersonnalise.Designer.cs">
+      <DependentUpon>ScanPersonnalise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Securite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Securite.Designer.cs">
+      <DependentUpon>Securite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Stability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Stability.Designer.cs">
+      <DependentUpon>Stability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StartupSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StartupSoftware.Designer.cs">
+      <DependentUpon>StartupSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StoredPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StoredPwd.Designer.cs">
+      <DependentUpon>StoredPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StoredWifi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StoredWifi.Designer.cs">
+      <DependentUpon>StoredWifi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TemporyFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TemporyFile.Designer.cs">
+      <DependentUpon>TemporyFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserScan.resx">
+      <DependentUpon>UserScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserScanComplete.resx">
+      <DependentUpon>UserScanComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserScanPerso.resx">
+      <DependentUpon>UserScanPerso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\AllProgram.resx">
+      <DependentUpon>AllProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Antivirus.resx">
+      <DependentUpon>Antivirus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\BankCards.resx">
+      <DependentUpon>BankCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ControlParental.resx">
+      <DependentUpon>ControlParental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Disk.resx">
+      <DependentUpon>Disk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EventLogAlert.resx">
+      <DependentUpon>EventLogAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Firewall.resx">
+      <DependentUpon>Firewall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\FrequentlyCrashingPrograms.resx">
+      <DependentUpon>FrequentlyCrashingPrograms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Historics.resx">
+      <DependentUpon>Historics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\InfosSysteme.resx">
+      <DependentUpon>InfosSysteme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Maintenance.resx">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Memoire.resx">
+      <DependentUpon>Memoire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ObjectionableWebsites.resx">
+      <DependentUpon>ObjectionableWebsites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Parametres.resx">
+      <DependentUpon>Parametres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PassWord.resx">
+      <DependentUpon>PassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Performance.resx">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Quarantaine.resx">
+      <DependentUpon>Quarantaine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Recycle.resx">
+      <DependentUpon>Recycle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reseau.resx">
+      <DependentUpon>Reseau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\RestorePoints.resx">
+      <DependentUpon>RestorePoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Scan.resx">
+      <DependentUpon>Scan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ScanComplete.resx">
+      <DependentUpon>ScanComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ScanPersonnalise.resx">
+      <DependentUpon>ScanPersonnalise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Securite.resx">
+      <DependentUpon>Securite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Stability.resx">
+      <DependentUpon>Stability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StartupSoftware.resx">
+      <DependentUpon>StartupSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StoredPwd.resx">
+      <DependentUpon>StoredPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StoredWifi.resx">
+      <DependentUpon>StoredWifi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TemporyFile.resx">
+      <DependentUpon>TemporyFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Ressources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ressources\25582_56376_check_clean_shield.png" />
+    <Content Include="Ressources\2860521.png" />
+    <Content Include="Ressources\3441901.png" />
+    <Content Include="Ressources\5aee31bffde4bff4a52cf0867dd85572.gif" />
+    <Content Include="Ressources\69524.png" />
+    <Content Include="Ressources\995001.png" />
+    <Content Include="Ressources\antivirus.jpeg" />
+    <Content Include="Ressources\attente.gif" />
+    <Content Include="Ressources\AttenteScan.gif" />
+    <Content Include="Ressources\baseupdate.png" />
+    <Content Include="Ressources\baseupdate_hover.png" />
+    <Content Include="Ressources\Circulo-Carga-62157.gif" />
+    <Content Include="Ressources\Copie de yello.gif" />
+    <Content Include="Ressources\DesertedDazzlingBudgie-small.gif" />
+    <Content Include="Ressources\download.jpeg" />
+    <Content Include="Ressources\download.png" />
+    <Content Include="Ressources\draka-virus-indicator1.png" />
+    <Content Include="Ressources\helps.png" />
+    <Content Include="Ressources\history.png" />
+    <Content Include="Ressources\home.png" />
+    <Content Include="Ressources\iconfinder_clean_7070.png" />
+    <Content Include="Ressources\iconfinder_icon-close_211652 %281%29.png" />
+    <Content Include="Ressources\iconfinder_minus-remove-delete-minimize_2931142.png" />
+    <Content Include="Ressources\iconfinder_minus-remove-delete-minimize_29311421.png" />
+    <Content Include="Ressources\iconfinder_zoom-normal-regular_2931184.png" />
+    <Content Include="Ressources\images-alert.png" />
+    <Content Include="Ressources\images-good-scan.jpeg" />
+    <Content Include="Ressources\images-green-scan.jpeg" />
+    <Content Include="Ressources\images-midel-alert.png" />
+    <Content Include="Ressources\images-red-alert.png" />
+    <Content Include="Ressources\images-semi-alert.png" />
+    <Content Include="Ressources\images.jpeg" />
+    <Content Include="Ressources\image_2021_09_20T16_31_25_417Z.png" />
+    <Content Include="Ressources\image_2021_09_20T16_31_54_660Z.png" />
+    <Content Include="Ressources\image_2021_09_20T16_32_22_468Z.png" />
+    <Content Include="Ressources\loader.gif" />
+    <Content Include="Ressources\maintenance.png" />
+    <Content Include="Ressources\maintenance1.png" />
+    <Content Include="Ressources\maintenance_hover.png" />
+    <Content Include="Ressources\maintenance_hover1.png" />
+    <Content Include="Ressources\performance.png" />
+    <Content Include="Ressources\performance_hover.png" />
+    <Content Include="Ressources\protectionsetting.png" />
+    <Content Include="Ressources\protectionsetting_hover.png" />
+    <Content Include="Ressources\quarantaine.png" />
+    <Content Include="Ressources\quarantine.png" />
+    <Content Include="Ressources\quarantine_hover.png" />
+    <Content Include="Ressources\resized final logo.png" />
+    <Content Include="Ressources\resized final logo1.png" />
+    <Content Include="Ressources\scan.png" />
+    <Content Include="Ressources\scan1.png" />
+    <Content Include="Ressources\scan_hover.png" />
+    <Content Include="Ressources\screen.gif" />
+    <Content Include="Ressources\screen99.gif" />
+    <Content Include="Ressources\screenred.gif" />
+    <Content Include="Ressources\Screenshot_2021-07-12-13-39-18-396_com.facebook.lite.png" />
+    <Content Include="Ressources\screenyellow.gif" />
+    <Content Include="Ressources\security.png" />
+    <Content Include="Ressources\settings.png" />
+    <Content Include="Ressources\Silver-Balls-Swinging.gif" />
+    <Content Include="Ressources\stability.png" />
+    <Content Include="Ressources\update.png" />
+    <Content Include="Ressources\uwp1331138.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DMVIEW2Lib">
+      <Guid>{AEB84C80-95DC-11D0-B7FC-B61140119C4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MMC20">
+      <Guid>{8E80422B-CAC4-472B-B272-9635F1DFEF3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PMCObjLib">
+      <Guid>{A1B0DE63-7454-4184-B5B6-6ACFDAC5C9A6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Forms.1.2.1.6229\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.1.2.1.6229\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\Xamarin.Forms.1.2.1.6229\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('packages\Xamarin.Forms.1.2.1.6229\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
